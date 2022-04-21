@@ -181,7 +181,7 @@ function switchCase(n) {
       answer = "default";
       break;
   }
-	return answer;
+  return answer;
 }
 console.log(switchCase(4));		//Outputs 'delta'
 
@@ -235,13 +235,13 @@ for(let key in object){
 
 // Break / continue statements
 for(i = 0; i < 10; i++){
-	if(i == 3){
-		continue;
-	}
-	if(i == 7){
-		break;
-	}
-	console.log(i);  // Output: 1, 2, 4, 5, 6
+  if(i == 3){
+    continue;
+  }
+  if(i == 7){
+    break;
+  }
+  console.log(i);  // Output: 1, 2, 4, 5, 6
 }
 
 
@@ -253,7 +253,7 @@ for(i = 0; i < 10; i++){
 sum(2, 3);   // Outputs 5
 
 function sum(a, b) {
-	return a + b;
+  return a + b;
 }
 
 
@@ -291,8 +291,8 @@ myObject.myMethod(); //Arrow functions do not bind their own 'this', instead, th
 // Scope
 let outerWear = "T-Shirt";        //Global scope
 function myOutfit() {
-	let outerWear = "sweater";      //Local scope
-	return outerWear;
+  let outerWear = "sweater";      //Local scope
+  return outerWear;
 }
 console.log(myOutfit());          // Outputs "sweater"
 console.log(outerWear);           // Outputs "T-Shirt"
@@ -300,7 +300,7 @@ console.log(outerWear);           // Outputs "T-Shirt"
 
 // Default parameters in functions
 function increment(arg1, arg2 = 1) {
-	return arg1 + arg2;
+  return arg1 + arg2;
 };
 console.log(increment(5));      // Outputs 6
 console.log(increment(5, 2));   // Outputs 7
@@ -308,8 +308,8 @@ console.log(increment(5, 2));   // Outputs 7
 
 // Spread Operator and Rest Parameters
 function sum(...args){
-	console.log('You have passed ' + args.length + ' arguments'); // You have passed 6 arguments
-	return args.reduce((a, b) => a + b);		
+  console.log('You have passed ' + args.length + ' arguments'); // You have passed 6 arguments
+  return args.reduce((a, b) => a + b);		
 }
 var numbers = [1, 2, 3];
 console.log(sum(...numbers, 4, 5, 6));  // Output: 21
@@ -670,12 +670,12 @@ let clon3 = JSON.parse(JSON.stringify(obj));    // Using JSON.parse and JSON.str
 
 // Accessing Nested Objects
 var myStorage = {
-	car: {
-		inside: {
-			'glove box': 'maps',
-			seats: 'crumbs'
-		}		
-	}
+  car: {
+    inside: {
+      'glove box': 'maps',
+      seats: 'crumbs'
+    }		
+  }
 };
 var gloveBoxContents = myStorage.car.inside['glove box'];	  //Outputs 'maps'
 
@@ -728,7 +728,7 @@ const monsterFactory = (name, age, catchPhrase) => {
     name,				
     age,
     scare() {
-    	console.log(catchPhrase);
+      console.log(catchPhrase);
     } 
   }
 };
@@ -751,15 +751,15 @@ const { tastes: {drink, food} } = vampire;      // drink outputs 'Blood', food o
 
 // Destructuring Assignment to pass an Object as a Function's Parameters
 const stats = {
-	max: 56.78,
-	standard_deviation: 4.34,
-	median: 34.54,
-	mode: 23.87,
-	min: -0.75,
-	average: 35.85
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
 };
 function half({max, min}) {
-	return (max + min) / 2.0;
+  return (max + min) / 2.0;
 }
 console.log(half(stats));
 
@@ -1175,9 +1175,9 @@ Carte.isLowSodium();
 
 // Comprobar disponibilidad de localStorage en navegador
 if(typeof(Storage) !== 'undefined'){
-	console.log("LocalStorage disponible");
+  console.log("LocalStorage disponible");
 } else {
-	console.log("navegador incompatible con localStorage");
+  console.log("navegador incompatible con localStorage");
 }
 
 // Guardar datos en LocalStorage
@@ -1188,9 +1188,9 @@ console.log(localStorage.getItem("titulo"));
 
 // Guardar objetos
 let usuario = {
-	nombre: "Ava",
-	apellido: "Lovelace",
-	edad: 28
+  nombre: "Ava",
+  apellido: "Lovelace",
+  edad: 28
 };
 localStorage.setItem("usuario", JSON.stringify(usuario));     // (Key / Value)
 
@@ -1211,17 +1211,17 @@ localStorage.clear();
 
 // setTimeout
 setTimeout (() => {
-	console.log("Hello World");	
+  console.log("Hello World");	
 }, 2000);							
 
 // setInterval	
 const pep = setInterval (() => {
- 	console.log("Hello boy");
+   console.log("Hello boy");
 }, 2000);
-	
+  
 // clearInterval
 setTimeout(() => {
-	clearInterval(pep);
+  clearInterval(pep);
 }, 12000);
 
 
@@ -1231,7 +1231,7 @@ setTimeout(() => {
 
 // Constructing a Promise Object
 const myFirstPromise = new Promise((resolve, reject) => {
-	if (1 > 2) {
+  if (1 > 2) {
     resolve('I resolved!');
   } else {
     reject('I rejected!'); 
