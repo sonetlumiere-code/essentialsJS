@@ -11,39 +11,39 @@
 */
 
 // Conseguir elementos
-var tituloId = document.getElementById("mi caja");				    //Conseguir elementos con un ID concreto
-var cajaDiv = document.getElementsByTagName("div");				    //Conseguir elementos por su etiqueta
-var cajaClase = document.getElementsByClassName("carton");		//Conseguir elementos por su clase
+const tituloId = document.getElementById("mi caja");				    //Conseguir elementos con un ID concreto
+const cajaDiv = document.getElementsByTagName("div");				    //Conseguir elementos por su etiqueta
+const cajaClase = document.getElementsByClassName("carton");		//Conseguir elementos por su clase
 
 
 // Query selector 
-var seleccionarId = document.querySelector("#encabezado");
-var seleccionarEtiqueta = document.querySelector("input");
-var seleccionarClase = document.querySelector(".plastico");
-var elements = document.querySelectorAll("div");
+const seleccionarId = document.querySelector("#encabezado");
+const seleccionarEtiqueta = document.querySelector("input");
+const seleccionarClase = document.querySelector(".plastico");
+const elements = document.querySelectorAll("div");
 Array.from(elements);
 
 
 // Acceder al contenido
-var nombre = document.querySelector("#nombre");
+const nombre = document.querySelector("#nombre");
 nombre.value;
-var todosLosDivs = document.getElementsByTagName('div');
-var cajaDos = todosLosDivs[1].textContent;
+const todosLosDivs = document.getElementsByTagName('div');
+const cajaDos = todosLosDivs[1].textContent;
 console.log(cajaDos);         //Outputs: Soy otra caja
 
 
 // Modificar contenido
-var caja = document.getElementById("mi caja2");
+const caja = document.getElementById("mi caja2");
 console.log(document.getElementById("mi caja2").innerHTML); // Outputs: Soy otra caja       
 caja.innerHTML = "Ahora soy un tupper";
 console.log(caja.innerHTML);  // Outputs: Ahora soy un tupper
 
 
 // Crear elementos del DOM
-var hr = document.createElement("hr");
-var parrafo = document.createElement("p");
-var texto = document.createTextNode("nuevo texto");
-var seccion = document.querySelector("#miseccion");
+const hr = document.createElement("hr");
+const parrafo = document.createElement("p");
+const texto = document.createTextNode("nuevo texto");
+const seccion = document.querySelector("#miseccion");
 parrafo.append(texto);
 seccion.appendChild(parrafo);
 seccion.prepend(hr);
@@ -102,15 +102,15 @@ function getBom() {
 }
 
 function redirect(url) {
-	window.location.href = url;
+  window.location.href = url;
 }
 
 function abrirVentana(url) {
-	window.open(url);
+  window.open(url);
 }
 
-const redirect = () => {
-	window.location.replace("http://www.w3schools.com");
+function redirectReplace() {
+  window.location.replace("http://www.w3schools.com");
 }
 
 
@@ -121,11 +121,11 @@ const redirect = () => {
 <button id="boton"> Presioname </button>
 <form> <input type="text" name="nombre" id="campo_nombre"/> </form>
 */
-var boton = document.querySelector("#boton");
-var input = document.querySelector("#campo_nombre");
+const boton = document.querySelector("#boton");
+const input = document.querySelector("#campo_nombre");
 
 function cambiarColor() {
-	boton.style.background = "green";
+  boton.style.background = "green";
   console.log(input.value);
 }
 
@@ -140,7 +140,7 @@ boton.addEventListener('mouseout', () => cambiarColor());
 
 // Focus
 input.addEventListener('focus', function() {
-	console.log("(focus) Estas dentro del input");
+  console.log("(focus) Estas dentro del input");
 });
 
 // Scroll
@@ -162,23 +162,23 @@ document.onmousemove = function(e){
 
 // Blur
 input.addEventListener('blur', function() {
-	console.log("(blur) Estas fuera del input");
+  console.log("(blur) Estas fuera del input");
 });
 
 // Keydown
 document.addEventListener("keydown", function(e){
-	var key = e.key
-	console.log("(keydown) Estas pulsando esta tecla " + key);
+  let key = e.key
+  console.log("(keydown) Estas pulsando esta tecla " + key);
 });
 
 // Keypress
 input.addEventListener('keypress', function(event) {
-	console.log("(keypress) Tecla presionada ", String.fromCharCode(event.keyCode));
+  console.log("(keypress) Tecla presionada ", String.fromCharCode(event.keyCode));
 });
 
 // Keyup
 input.addEventListener('keyup', function(event) {
-	console.log("(keyup) Tecla soltada", String.fromCharCode(event.keyCode));
+  console.log("(keyup) Tecla soltada", String.fromCharCode(event.keyCode));
 });
 
 //Event Bubbling
