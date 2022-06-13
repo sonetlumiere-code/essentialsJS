@@ -1303,14 +1303,20 @@ function getProducts(){
     setTimeout(() => resolve('products data'), 3000)
   })
 }
-const app = (async () => {
+const appSerial = (async () => {
   try {   
-    // const respuestaClientes = await descargarClientes();
-    // console.log(respuestaClientes);
-    // const respuestaProductos = await descargarProductos();
-    // console.log(respuestaProductos)
-    // tarda en total 5 segundos  
-
+    const responseClients = await getClients();
+    console.log(responseClients);
+    const responseProducts = await getProducts();
+    console.log(responseProducts);
+    // tarda en total 5 segundos
+  }
+  catch(error){
+    console.log(error)
+  }
+})();
+const appParallel = (async () => {
+  try {   
     const totalData = await Promise.all([getClients(), getProducts()]);
     console.log(totalData); 
     // tarda en total 3 segundos
