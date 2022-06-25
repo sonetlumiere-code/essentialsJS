@@ -110,7 +110,7 @@ c *= 2;  // Output: 24
 d /= 5;  // Output: 5
 
 
-// Comparison with the Strict Inequality Operator
+// Strict Equality Comparison
 console.log(3 == '3');      //true
 console.log(3 === '3');     //false (does not convert types of data)
 console.log(2 != '2');      //false
