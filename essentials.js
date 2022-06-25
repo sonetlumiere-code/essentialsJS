@@ -117,7 +117,7 @@ console.log(2 != '2');      //false
 console.log(2 !== '2');     //true (does not convert types of data)
 
 
-//Nullish coalescing operator
+// Nullish coalescing operator
 const valor1 = 0 || 'default';                  // output: 'default'
 const valor2 = '' || 1000;                      // output: '1000'
 const valor3 = undefined || 'default';          // output: 'default'
