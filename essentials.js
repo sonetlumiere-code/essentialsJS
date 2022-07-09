@@ -1131,7 +1131,7 @@ placeOrder();
 
 // export default
 let Menu2 = {};
-export default Menu;    // Uses the JavaScript export statement to export JavaScript objects, functions, and primitive data types.
+export default Menu2;    // Uses the JavaScript export statement to export JavaScript objects, functions, and primitive data types.
 //import
 import Menu2 from './menu';
 
